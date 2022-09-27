@@ -1,0 +1,66 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>下北沢会员制编程培训注册系统</title>
+</head>
+<body>
+    <h4>下北沢会员制编程培训注册系统</h4>
+    <table width="810">
+    <!-- 第一行  -->
+        <tr>
+        <td><label for="nm">你的名字？</label></td>
+        <td><input type="text" maxlength="81" name="mingzi" id="nm"></td>
+    </tr>
+    <!--第二行-->
+    <tr>
+        <td><label for="ag">那么首先能告诉我/n你的年龄吗？</label></td>
+        <td><input type="number" name="nianling" id="ag" min="0" max="65533"></td>
+    </tr>
+    <!--第三行-->
+    <tr>
+        <td><label for="brth">你的生日是？</label></td>
+        <td><input type="date" name="Birth" id="brth"></td>
+    </tr>
+    <!--第四行-->
+    <tr>
+        <td><label for="em">Email是多少呢？</label></td>
+        <td><input type="text" name="Email" id="em" maxlength="114"></td>
+    </tr>
+    <!--第五行-->
+    <tr>
+        <td><label for="hb">看你蛮结实的最近有在做什么运动吗?(指爱好)</label></td>
+        <td><input type="text" name="hobby" id="hb" maxlength="114"></td>
+    </tr>
+    <!--第六行-->
+    <tr>
+    <td>那么学编程什么的有在搞吗？</td>
+    <td>
+        <input type="radio" name="Bool" checked="checked" id="y"><label for="y">压力马斯内</label>
+        <input type="radio" name="Bool" checked="checked" id="n"><label for="n">现在没有(眼神游移)</label>
+    </td>
+    </tr>
+    <!--第七行-->
+    <tr>
+        <td>有什么想介绍的吗？</td>
+        <td><textarea>个人简介</textarea></td>
+    </tr>
+    <!--第八行-->
+    <tr>
+        <td></td>
+        <td><input type="submit" value="免费注册"></td>
+    </tr>
+     <!--第⑨行-->
+     <tr>
+        <td></td>
+        <td><input type="checkbox" checked="checked">我同意<a href="null">会员规则</a></td>
+    </tr>
+     <!--第十行-->
+     <tr>
+        <td></td>
+        <td><a href="null">已经是会员？请点击这里</a></td>
+    </tr>
+    </table> 
+</body>
+</html>
