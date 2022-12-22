@@ -1,0 +1,111 @@
+
+<!DOCTYPE html>
+<html>
+	<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		
+		<title>课堂练习</title>
+		<style>
+			body {
+				background-image: linear-gradient(-225deg, #5D9FFF 0%, #B8DCFF 48%, #6BBBFF 100%);			}
+			div{
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%); 
+				width: 400px;
+				height: 300px;
+				background-image: linear-gradient(-225deg, #20E2D7 0%, #F9FEA5 100%);			
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			<form>
+				<table>
+					<tbody>
+					<tr>
+						<td>姓名:</td>
+						<td>
+							<input type="text" id="username" placeholder="请输入姓名" required>
+						</td>
+					</tr>
+					<tr>
+						<td>密码:</td>
+						<td>
+							<input type="password" id="mima" placeholder="请输入至少8位的密码" onchange="yanzhengmima()">
+							<font id="hint" color="red" hidden>*密码至少8位*</font>
+						</td>
+					</tr>
+					<tr>
+						<td>性别:</td>
+						<td>
+							<input type="radio" name="sex" value="男">男
+							<input type="radio" name="sex" value="女">女
+						</td>
+					</tr>
+					<tr>
+						<td>血型:</td>
+						<td>
+							<input type="radio" name="blood" value="O">O
+							<input type="radio" name="blood" value="A">A
+							<input type="radio" name="blood" value="B">B
+							<input type="radio" name="blood" value="AB">AB
+						</td>
+					</tr>
+					<tr>
+						<td>爱好:</td>
+						<td>
+							<input type="checkbox" name="hobby" value="唱">唱
+							<input type="checkbox" name="hobby" value="跳">跳
+							<input type="checkbox" name="hobby" value="rap">rap
+							<input type="checkbox" name="hobby" value="篮球">篮球
+						</td>
+					</tr>
+					<tr>
+						<td>文件:</td>
+						<td>
+							<input type="file" id="file" name="file" value="浏览">
+						</td>
+					</tr>
+					<tr>
+						<td>简介:</td>
+						<td>
+							<textarea placeholder="选填"></textarea>
+						</td>
+					</tr>
+					<tr>
+						<td>城市:</td>
+						<td>
+							<select id="city">
+								<option value="广东省">广东省</option>
+								<option value="四川省">四川省</option>
+								<option value="河北省">河北省</option>
+								<option value="山西省">山西省</option>
+								<option value="黑龙江省">黑龙江省</option>
+								<option value="浙江省">浙江省</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="3">
+							<input type="submit" id="sub" value="提交">
+							<input type="reset" id="re" value="重置">
+						</td>
+					</tr>
+					</tbody>
+				</table>
+			</form>
+		</div>
+	<script>
+		function yanzhengmima(){
+			var mima = document.getElementById('mima').value;
+			var hint = document.getElementById('hint');
+			if(mima.length < 8 || mima == ""){
+				hint.hidden = false
+			}else{
+				hint.innerHTML = "<font color='green'>密码判断强度及格</font>"
+			}
+		}
+	</script>
+	</body>
+</html>

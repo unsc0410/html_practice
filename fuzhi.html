@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html>
+	<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>课堂作业</title>
+		<script>
+			function myClick(){
+				var text = document.getElementById('yi').value;
+				var text1 = document.getElementById('er');
+				var san = document.getElementById('san');
+				if(text !== null && text!== ""){
+					text1.value = text;
+					san.innerHTML = "复制成功！";
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<table>
+			<tr>
+				<td><input type="text" id="yi"></td>
+			</tr>
+			<tr>
+				<td><input type="button" id="btn" value="复制" onclick="myClick()"></td>
+			</tr>
+			<tr>
+				<td><input type="text" id="er" readonly="readonly"></td>
+			</tr>
+		</table>
+		<p id="san"></p>
+	</body>
+</html>
