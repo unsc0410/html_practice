@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+* {
+    margin: 0;
+    padding: 0;
+}
+html {
+  width: 100%;
+  height: 100%;
+}
+body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    background-image: url(./kunkun.gif);
+    background-repeat: no-repeat;
+	  background-size: 100% 100%; 
+    justify-content: center;
+    align-items: center;
+}
+</style>
+<body>
+    <canvas id="myCanvas" width="550" height="550" style="border:1px solid #d3d3d3;">
+    </canvas>   
+</body>
+<script>
+    // 页面加载时先渲染全部数据
+window.onload = function() {
+    var c=document.getElementById("myCanvas");
+    var ctx=c.getContext("2d");
+    let image = new Image();
+        image.src = './aixin.png';
+        image.onload = function () {
+            ctx.drawImage(image,200,200,150,150);
+            bigimg();
+    };
+
+    function bigimg(){
+    ctx.clearRect(200,200,150,150);
+    ctx.drawImage(image,10,10,500,500);
+    setTimeout(function(){ 
+    smallimg();    
+    }, 500);
+   };
+
+    function smallimg(){
+    ctx.clearRect(10,10,500,500);
+    ctx.drawImage(image,200,200,150,150);
+    setTimeout(function(){ 
+    bigimg();
+    }, 500);  
+   };
+    }
+   
+</script>
+    
+</html>
