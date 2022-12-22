@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  .sese{
+    width: 100px;
+    height: 100px;
+    border: 3px solid red;
+    background-image: linear-gradient(to top, #fad0c4 0%, #ffd1ff 100%);
+    position:relative;
+	animation:demo 5s infinite;
+
+  }
+  @keyframes demo
+{
+	0% {
+    transform: translateX(0px);
+  }
+  25% {
+    transform: translateX(300px);
+    border: 3px solid red;
+    background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
+  }
+  50% {
+    transform: translate(300px, 300px);
+    border: 3px solid red;
+    background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
+  }
+  75% {
+    transform: translate(0px, 300px);
+    border: 3px solid red;
+    background-image: linear-gradient(to top, #feada6 0%, #f5efef 100%);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+
+</style>
+<body>
+  <div class="sese">
+
+  </div>
+</body>
+</html>

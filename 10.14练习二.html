@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+
+    <title>demo2</title>
+
+</head>
+<style>
+  *{
+    margin:0;
+    padding:0;
+}
+
+/* 三个元素都需要弹性布局，所以写在一块 */
+body,.navbar,.navbar ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* 反转横向排列（右对齐，从后往前排，最后一项排在最前面。默认不写的话是左对齐row */
+    flex-direction:row-reverse
+}
+.box {
+  width: 80px;
+  height: 600px;
+}
+.navbar{
+    position: relative;
+    padding: 20px;
+    background-color: aqua;
+    border-radius: 50px;
+    /* 添加浮动 */
+    float: left;
+}
+.navbar input{
+    width: 40px;
+    height: 40px;
+    /* 这里我们把复选框不透明度设置为0，直接变透明 */
+    opacity: 0;
+    /* 鼠标变小手 */
+    cursor: pointer;
+}
+.navbar img{
+    position: absolute;
+    right:25px;
+    width: 30px;
+    height: 30px;
+    /* 现在span覆盖着复选框，鼠标放到span上是点不中复选框的，下面这个属性就可以解决这个问题，即便鼠标放到span上点击也能选中或取消选中复选框 */
+    pointer-events: none;
+    /* 收回来的时候过渡刚好是相反的 */
+    transition: transform 0.3s ease-in-out,top 0.3s ease-in-out 0.3s;
+    /* 现在过渡效果有点快，有点生硬 */
+}
+.navbar ul{
+    width: 0;
+    /* 溢出隐藏 */
+    overflow: hidden;
+    /* 在这里加个过渡，可以让展开和收起自然一些 */
+    transition: all 0.5s;
+    /* 现在导航栏收起的时候，这个圆是扁的,这个问题是因为文字被换行显示了，两个汉字竖着排列了，所以盒子被撑大了，所以
+    nowrap：强制在同一行内显示所有文本，直到文本结束或者文本后面有标签。 */
+    white-space: nowrap;
+}
+.navbar ul li{
+    list-style: none;
+    margin: 0px 15px;
+}
+.navbar ul li a{
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 700;
+    color:#333;
+}
+.navbar ul li a:hover{
+    color:#fb7299;
+}
+/* :checked是当复选框被选中的时候，~这个是兄弟选择器，查找同一级的ul */
+.navbar input:checked ~ ul{
+    width: 150px;
+}
+
+
+
+</style>
+<body>
+    <p>请点击</p>
+    <div class="box">
+      <div class="navbar">
+        <input type="checkbox">       
+          <img src="./MUR.webp" alt="">       
+        <ul>
+            <li><a href="javascript:;">MUR</a></li> 
+        </ul>
+    </div>
+    <div class="navbar">
+        <input type="checkbox">       
+          <img src="./MUR猫.webp" alt="">       
+        <ul>
+            <li><a href="javascript:;">MUR猫o</a></li> 
+        </ul>
+    </div>
+    </div>
+    
+</body>
+
+</html>
