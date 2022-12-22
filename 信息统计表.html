@@ -1,0 +1,102 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <title>信息登记表</title>
+  <!-- <link rel="stylesheet" href="style07.css" type="text/css"> -->
+  <style type="text/css">
+    body {
+        background-color: #F7F3F7;
+    }
+    h2 {
+        color: red;
+        background-color: #9FCEFE;
+    }
+   input {
+    width:200px;
+    height:18px;                                 
+    border:1px solid #d4cdba;
+    padding:2px; 
+   }
+   
+   .btn input{
+    width:100px; 
+    height:30px;
+    border-radius:3px;
+   }
+   .boy {
+    width: 18px;
+    height: 18px;
+   }
+   .gril {
+    width: 18px;
+    height: 18px;
+   }
+   .aihao {
+    width: 18px;
+    height: 18px;
+   }
+  </style>
+ </head>
+ <body>
+  <div class="bg">
+   <form action="#" method="get" autocomplete="off">
+    <h2>信息统计表</h2>
+
+    
+    <p><span>真实姓名：</span>
+    <!-- 在下面的横线中填写`必填属性`required 和`自动聚焦`autofocus -->
+     <input type="text" name="real_name" placeholder="例如：朴秀" required autofocus/>
+    </p>
+    
+    <p><span>真实年龄：</span>
+     <!-- 在下面的横线中填写`最大值属性`和`最小值属性` -->
+     <input type="number" name="real_lage" value="22"   max="100"   min="1" required/>
+    </p>
+    <p><span>性别：</span>
+    
+            <input type="radio" name="sex" value="male" class="boy">男
+            <input type="radio" name="sex" value="female" class="gril">女
+    
+    </p>
+    
+    <p><span>出生日期：</span>
+     <!-- 在下面的横线中填写`type的日期类型` -->
+     <input type="date" name="birthday" value="1999-10-1" required/></p>
+    </p>
+    
+    <p><span>爱好：</span>
+        <input type="checkbox" name="vehicle" class="aihao" value="Bike">旅游
+        <input type="checkbox" name="vehicle" class="aihao" value="Car">登山
+        <input type="checkbox" name="vehicle" class="aihao" value="Car">游泳
+        <input type="checkbox" name="vehicle" class="aihao" value="Car">上网
+        <input type="checkbox" name="vehicle" class="aihao" value="Car">健身
+      
+    </p>
+    <tr>
+        <td>学历：</td>
+        <td><select name="">
+                <option value="">--请选择--</option>
+                <option value="1">专科</option>
+                <option value="2">本科</option>
+                <option value="3">硕士</option>
+                <option value="4">博士及以上</option>
+            </select>
+        </td>
+    </tr>
+    <br>
+    <tr >
+        <td>自我介绍：</td>
+        <td>
+            <textarea placeholder="自我介绍：" cols="30" rows="5"></textarea>
+        </td>
+    </tr>
+    
+    <p class="btn">
+     <input type="submit" value="提交" />
+     <input type="reset" value="重置" />
+    </p>
+   </form>
+  </div>
+ </body>
+</html>
